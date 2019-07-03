@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>详情页面</title>
     <link rel="stylesheet" href="../css/info.css">
 </head>
 <body>
@@ -24,8 +24,9 @@
                     ＞FS 全国联赛T恤
                 </p>
                 <div class="main">
-                    <div class="product-img">
-                        <a href="" class="big-img">
+
+                    <div class="product-img" id="detail-img">
+                        <!-- <a href="" class="big-img">
                             <img src="../images/2.jpg" alt="">
                         </a>
                         <div class="small-list">
@@ -55,54 +56,81 @@
                                 </ul>
                             </div>
                             <a href="" class="next"></a>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="product-choice">
-                        <h3>FS 全国联赛T恤</h3>
-                        <!-- 加入收藏 -->
-                        <span class="shoucang">加入收藏</span>
-                        <p class="product-text">新品正式发售</p>
-                        <p class="product-price">价格：<span class="price">￥108</span></p>
-                        <div class="freight-wrap">
-                            <span class="freight-text">运费 :</span>
-                            <span class="area">
-                                上海 至
-                                <span class="provice">上海</span>
-                                -
-                                <span class="city">上海市</span>
-                                -
-                                <span class="dist">黄浦区</span>
-                            </span>
-                            <a class="select"></a>
-                            <span class="yf">快递：10元</span>
+                    <script type="text/html" id="img-template"> 
+                        <a href="" class="big-img">
+                            <img src="{{data.images[0]}}" data-zoom-image="{{data.images[0]}}" class="zoom-img" alt=""> 
+                        </a>
+                        <div class="small-list">
+                            
+                            <div class="img-list" id="kunsile">
+                                <ul>
+                                    {{each data.images img}}
+                                    <li class="f2">
+                                        <a href="" data-image="{{img}}" data-zoom-image="{{img}}">
+                                            <img src="{{img}}">
+                                        </a>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            
                         </div>
-                        <div class="model">
-                            <b>型号 :</b>
-                            <span>M</span>
-                            <span>L</span>
-                            <span>XL</span>
-                            <span>XXL</span>
-                        </div>
-                        <div class="style">
-                            <b>颜色 :</b>
-                            <span>黑暗低语</span>
-                            <span>斗牛狂潮</span>
-                        </div>
-                        <div class="num">
-                            <b class="num-text">购买数量 ：</b>
-                            <a class=" count_minus" href="javascript:void(0)">-</a>
-                            <p>
-                                    <input type="text" value="1" id="buyCount" class="shop_count" readonly="readonly">
-                            </p>
-                            <a class=" count_plus" href="javascript:void(0)">+</a>
-                            <span class="stock">（剩余库存19件）</span>
-                        </div>
-                        <div class="shop-btn">
-                            <a class="link1" id="edit" href="#" >立刻购买</a>
-                            <a class="link2" id="shopcart" href="#" >放入购物车</a>
-                        </div>
+                    </script>
+
+
+
+                    <div class="product-choice" id="detail-info">
+                        
                     </div>
+                    <script type="text/html" id="list-template"> 
+                        <h3>{{detail.title}}</h3>
+                    <!-- 加入收藏 -->
+                    <span class="shoucang">加入收藏</span>
+                    <p class="product-text">{{detail.describe}}</p>
+                    <p class="product-price">价格：<span class="price">￥{{detail.price}}</span></p>
+                    <div class="freight-wrap">
+                        <span class="freight-text">运费 :</span>
+                        <span class="area">
+                            上海 至
+                            <span class="provice">上海</span>
+                            -
+                            <span class="city">上海市</span>
+                            -
+                            <span class="dist">黄浦区</span>
+                        </span>
+                        <a class="select"></a>
+                        <span class="yf">快递：10元</span>
+                    </div>
+                    <div class="model">
+                        <b>型号 :</b>
+                        <span>{{detail.size}}</span>
+                        <span>{{detail.size}}</span>
+                        <span>{{detail.size}}</span>
+                        <span>{{detail.size}}</span>
+                    </div>
+                    <div class="style">
+                        <b>颜色 :</b>
+                        <span>{{detail.typea}}</span>
+                        <span>{{detail.typeb}}</span>
+                    </div>
+                    <div class="num">
+                        <b class="num-text">购买数量 ：</b>
+                        <a class=" count_minus" href="javascript:void(0)">-</a>
+                        <p>
+                                <input type="text" value="1" id="buyCount" class="shop_count" readonly="readonly">
+                        </p>
+                        <a class=" count_plus" href="javascript:void(0)">+</a>
+                        <span class="stock">（剩余库存{{detail.surplus}}件）</span>
+                    </div>
+                    <div class="shop-btn">
+                        <a class="link1" id="edit" href="#" >立刻购买</a>
+                        <a class="link2" id="shopcart" href="#" >放入购物车</a>
+                    </div>
+                    </script>
                 </div>
+                
             </div>
         </div>
     <!-- footer -->

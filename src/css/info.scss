@@ -50,6 +50,11 @@
                     display: block;
                     margin-bottom: 40px;
                     background: #efefef;
+                    .zoom-img{
+                        width: 400px;
+                        height: 400px;
+                        vertical-align: top;
+                    }
                 }
                 .small-list{
                     position: relative;

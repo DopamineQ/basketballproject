@@ -1,0 +1,20 @@
+<script type="text/html" id="img-template"> 
+    <a href="" class="big-img">
+        <img src="{{detail.images[0]}}" data-zoom-image="{{detail.images[0]}}" class="zoom-img" alt=""> 
+    </a>
+    <div class="small-list">
+        <!-- <a href="" class="prev"></a> -->
+        <div class="img-list">
+            <ul>
+                {{each detail.images img}}
+                <li class="f2">
+                    <a href="" data-image="{{detail.images[0]}}" data-zoom-image="{{detail.images[0]}}">
+                        <img src="{{img}}">
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <!-- <a href="" class="next"></a> -->
+    </div>
+</script>
