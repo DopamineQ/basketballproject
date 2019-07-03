@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+}
+.register-wrap{
+    width: 100%;
+    height: 100%;
+    background: url(../images/login_newbg.jpg) no-repeat center top;
+    background-size: 100% 100%;
+    .logo{
+        width: 100%;
+        height: 120px;
+        background:url(../images/t2cn_logo-b.png) center 30px no-repeat;
+    }
+    .content{
+        width: 600px;
+        background:#Fff;
+        margin: 0 auto;
+        border: 1px solid #e6e6e6;
+        position: relative;
+        padding-bottom: 55px;
+        h1{
+            height: 60px;
+            line-height: 60px;
+            font-size: 24px;
+            color: #fff;
+            background: #333;
+            padding-left:40px; 
+        }
+        .register-content{
+            width: 400px;
+            margin: 0 auto;
+            padding-top: 62px;
+            li{
+                margin: 0 auto;
+                margin-bottom: 21px;
+                height: 38px;
+                .register-text{
+                    display: block;
+                    width: 70px;
+                    height: 38px;
+                    line-height: 38px;
+                    float: left;
+                    font-size: 16px;
+                    color: #333;
+                }
+                .register-input{
+                    float: left;
+                    width: 326px;
+                    height: 38px;
+                    border: 1px solid #5b5b5b;
+                    border-radius: 7px;
+                    text-align: center;
+                    color: #333;
+                    font-size: 16px;
+                    outline: none;
+                }
+            }
+        }
+        #register-btn{
+            display: block;
+            width: 400px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #bf000f;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin: 0 auto;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        .link{
+            width: 400px;
+            height: 80px;
+            margin: 0 auto;
+            text-align: right;
+            a{
+                color: #555555;
+                font-size: 15px;
+                line-height: 80px;
+                display: inline-block;
+                margin-left: 17px;
+            }
+        }
+    }
+    .bottom-wrap{
+        width: 100%;
+        text-align: center;
+        background: url(../images/luanbot_bg.jpg) repeat-x top; 
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 94px;
+        .bottom{
+            width: 920px;
+            margin: 0 auto;
+            height: 94px;
+            line-height: 20px;
+            padding-left: 126px;
+            padding-top: 5px;
+            text-align: left;
+            position: relative;
+            .logo-bottom{
+                position: absolute;
+                display: block;
+                width: 126px;
+                height: 94px;
+                left: 0;
+                top: 1px;
+                background: url(../images/logo-bottom.png) left center no-repeat;
+                text-indent: -9999px;
+            }
+            a{
+                color: #617596;
+                text-decoration: underline;
+            }
+            .gs-icon{
+                display: block;
+                background: url(//www.fsjoy.com/09fs/webtop/gs_icon.gif) no-repeat;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: 70px;
+                top: 10px;
+                text-indent: -9999px;
+                background-size: 100%;
+            }
+            .www-icon{
+                display: block;
+                background: url(//www.fsjoy.com/09fs/webtop/www.png) no-repeat;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                right: 120px;
+                top: 10px;
+                text-indent: -9999px;
+                background-size: 100%;
+            }
+        }
+    }
+}

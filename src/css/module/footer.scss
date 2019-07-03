@@ -1,0 +1,91 @@
+.footer-wrap{
+    width: 100%;
+    margin-top: 80px;
+    height: 300px;
+    background: #333;
+    padding: 40px 0;
+    .foot{
+        width: 980px;
+        margin: 0 auto;
+        height: 100%;
+        .bottom-nav{
+            width: 980px;
+            height: 136px;
+            li{
+                width: 130px;
+                height:136px;
+                float: left;
+                padding-left: 65px;
+                border-right: 1px solid #3d3d3d;
+                h3{
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom:15px; 
+                }
+                a{
+                    display: block;
+                    color: #999;
+                    height: 18px;
+                    line-height: 18px;
+                    margin-bottom: 15px;
+                }
+                a:hover{
+                    text-decoration:underline;
+                }
+            }
+            li:nth-child(5){
+                border: none;
+            }
+        }
+        .link{
+            width: 980px;
+            height: 136px;
+            padding-left: 145px;
+            padding-top: 30px;
+            box-sizing: border-box;
+            position: relative;
+            .ty-logo{
+                display: block;
+                width: 107px;
+                height: 44px;
+                background: url(../images/t2cn_logo.png) no-repeat center;
+                position: absolute;
+                left: 0;
+                top: 45px;
+            }
+            p{
+                line-height: 20px;
+                color: #999;
+                a{
+                    color: #ff9000;
+                    padding-right:6px; 
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+            .gs{
+                display:block;
+                background:url(//www.fsjoy.com/09fs/webtop/gs_icon.gif) no-repeat;
+                width:40px;
+                height:40px;
+                position:absolute;
+                right:25px;
+                top:42px;
+                text-indent:-9999px;
+                background-size:100%;
+            }
+            .ww{
+                display:block;
+                background:url(//www.fsjoy.com/09fs/webtop/www.png) no-repeat;
+                width:40px;
+                height:40px;
+                position:absolute;
+                right:65px;
+                top:41px;
+                text-indent:-9999px;
+                background-size:100%;
+            }
+        }
+    }
+}

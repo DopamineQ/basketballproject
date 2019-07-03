@@ -1,0 +1,335 @@
+@import'./module/aside.scss';
+@import'./module/header.scss';
+@import'./module/footer.scss';
+// content
+.content-wrap{
+    width: 100%;
+    margin-top: 30px;
+    .content{
+        width: 980px;
+        margin: 0 auto;
+        position: relative;
+        .title{
+            border-bottom: 3px solid #ff9000;
+            margin-bottom: 40px;
+            h2{
+                background: #ff9000;
+                font-size: 18px;
+                font-weight: normal;
+                color: white;
+                padding-left: 20px;
+                width: 140px;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        .top-link{
+            height: 40px;
+            line-height: 40px;
+            color: #999;
+            font-size: 14px;
+            a{
+                color: #999;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .main{
+            height: 560px;
+            border: 1px solid #ccc;
+            padding: 40px 40px 0;
+            .product-img{
+                width: 400px;
+                margin-right: 45px;
+                float: left;
+                .big-img{
+                    width: 400px;
+                    height: 400px;
+                    position: relative;
+                    display: block;
+                    margin-bottom: 40px;
+                    background: #efefef;
+                }
+                .small-list{
+                    position: relative;
+                    width: 400px;
+                    height: 80px;
+                    overflow: hidden;
+                    .prev{
+                        width: 20px;
+                        height: 80px;
+                        margin-right: 6px;
+                        background: url(../images/small_arrow.jpg) no-repeat;
+                        float: left;
+                    }
+                    .img-list{
+                        width: 338px;
+                        height: 80px;
+                        overflow: hidden;
+                        position: relative;
+                        float: left;
+                        ul{
+                            width: 9999px;
+                            height: 80px;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            .f2{
+                                margin-right: 9px;
+                                float: left;
+                                a{
+                                    width: 76px;
+                                    height: 78px;
+                                    border: 1px solid #cbcbcb;
+                                    display: block;
+                                    img{
+                                        width: 76px;
+                                        height: 78px;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .next{
+                        width: 20px;
+                        height: 80px;
+                        margin-right: 6px;
+                        background: url(../images/small_arrow.jpg) no-repeat;
+                        background-position: -20px 0;
+                        float: right;
+                    }
+                }
+            }
+            .product-choice{
+                width: 450px;
+                position: relative;
+                float: left;
+                h3{
+                    font-size: 36px;
+                    font-weight: normal;
+                    color: #333;
+                    line-height: 45px;
+                }
+                .shoucang{
+                    display: block;
+                    width: 21px;
+                    height: 17px;
+                    text-indent: -9999px;
+                    background: url(../images/icon.png) no-repeat;
+                    background-position: -120px -46px;
+                    position: absolute;
+                    right: -20px;
+                    top: 16px;
+                    cursor: pointer;
+                }
+                .product-text{
+                    color: #999;
+                    font-size: 18px;
+                    line-height: 35px;
+                }
+                .product-price{
+                    font-size: 18px;
+                    color: #ff0000;
+                    line-height: 45px;
+                    margin-bottom: 15px;
+                    .price{
+                        font-size: 24px;
+                        font-weight: normal;
+                    }
+                }
+                .freight-wrap{
+                    display: block;
+                    border-top: 1px solid #efefef;
+                    padding-top: 20px;
+                    height: 30px;
+                    position: relative;
+                    .freight-text{
+                        display: block;
+                        height: 30px;
+                        float: left;
+                        margin: 0 5px;
+                        line-height: 30px;
+                        font-size: 18px;
+                        color: #333;
+                    }
+                    .area{
+                        display: block;
+                        float: left;
+                        height: 30px;
+                        line-height: 30px;
+                        color: #999;
+                        margin: 0 5px;
+                        span{
+                            color: #999;
+                            line-height: 30px;
+                        }
+                    }
+                    .select{
+                        display: block;
+                        float: left;
+                        width: 15px;
+                        height: 9px;
+                        line-height: 30px;
+                        margin-top: 10px;
+                        background: url(../images/icon.png) -75px -54px no-repeat;
+                        cursor: pointer;
+                    }
+                    .yf{
+                        display: block;
+                        float: left;
+                        height: 30px;
+                        line-height: 30px;
+                        color: #999;
+                        margin: 0 5px;
+                    }
+                }
+                .model{
+                    height: 30px;
+                    color:#999;
+                    position: relative;
+                    margin-top: 15px;
+                    margin-bottom: 25px;
+                    line-height: 30px;
+                    b{
+                        font-size: 18px;
+                        color: #333;
+                        font-weight: normal;
+                        margin:  0 5px;
+                    }
+                    span{
+                        display: inline-block;
+                        height: 30px;
+                        padding: 0 15px;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #999;
+                        vertical-align: top;
+                        border: 1px solid #999;
+                        line-height: 30px;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                }
+                .style{
+                    height: 30px;
+                    color: #999;
+                    position: relative;
+                    margin-top: 15px;
+                    margin-bottom: 25px;
+                    clear: both;
+                    line-height: 30px;
+                    b{
+                        font-size: 18px;
+                        color: #333;
+                        font-weight: normal;
+                        margin: 0 5px;
+                    }
+                    span{
+                        display: inline-block;
+                        height: 30px;
+                        padding: 0 15px;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #999;
+                        vertical-align: top;
+                        border: 1px solid #999;
+                        line-height: 30px;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                }
+                .num{
+                    display: block;
+                    height: 30px;
+                    color: #999;
+                    position: relative;
+                    margin-top: 15px;
+                    margin-bottom: 25px;
+                    b{
+                        display: block;
+                        float: left;
+                        height: 30px;
+                        line-height: 30px;
+                        margin: 0 5px;
+                        font-size: 18px;
+                        color: #333;
+                    }
+                    .count_minus{
+                        display: block;
+                        float: left;
+                        width: 18px;
+                        height: 28px;
+                        border: 1px solid #efefef;
+                        margin: 0;
+                        text-align: center;
+                        line-height: 28px;
+                        color: #ccc;
+                    }
+                    p{
+                        width: 62px;
+                        height: 28px;
+                        border: 1px solid #999;
+                        float: left;
+                        .shop_count{
+                                width: 62px;
+                                height: 28px;
+                                border: none;
+                                background: none;
+                                text-align: center;
+                                line-height: 28px;
+                                color: #999;
+                        }
+                    }
+                    .count_plus{
+                        display: block;
+                        float: left;
+                        width: 18px;
+                        height: 28px;
+                        border: 1px solid #efefef;
+                        margin: 0;
+                        text-align: center;
+                        line-height: 28px;
+                        color: #ccc;
+                    }
+                    .stock{
+                        display: block;
+                        float: left;
+                        height: 30px;
+                        line-height: 30px;
+                        margin: 0 5px;
+                    }
+                }
+                .shop-btn{
+                    display: block;
+                    border-top: 1px solid #efefef;
+                    padding-top: 33px;
+                    .link1{
+                        display: block;
+                        width: 220px;
+                        height: 60px;
+                        float: left;
+                        line-height: 60px;
+                        text-align: center;
+                        background: #ff9000;
+                        color: white;
+                        font-size: 24px;
+                    }
+                    .link2{
+                        display: block;
+                        background: #efefef;
+                        width: 218px;
+                        height: 58px;
+                        float: right;
+                        border: 1px solid #ccc;
+                        color: #999;
+                        line-height: 58px;
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

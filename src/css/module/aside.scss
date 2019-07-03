@@ -1,0 +1,25 @@
+// aside
+*{
+    margin: 0;
+    padding:0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-size: 12px;
+    font-family: "微软雅黑",Tahoma,serif,"宋体";
+    background: white;
+}
+.aside{
+    width: 109px;
+    height: 227px;
+    margin-right: 5px;
+    position: fixed;
+    top: 30%;
+    right: 0px;
+    z-index: 1000;
+}

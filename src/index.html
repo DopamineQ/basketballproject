@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>街头篮球周边商城</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- aside -->
+    <aside></aside>
+    <!-- head -->
+    <header></header>
+    <!-- nav -->
+    <div class="big-nav">
+        <ul>
+            <li><a href="html/all.html">所有商品</a></li>
+            <li><a href="">周边服饰</a></li>
+            <li><a href="">毛绒玩偶</a></li>
+            <li><a href="">游戏生活</a></li>
+            <li><a href="">促销商品</a></li>
+        </ul>
+    </div>
+    <!-- content -->
+    <div class="content-wrap">
+        <!-- 轮播图 -->
+        <div class="carousel"></div>
+        <!-- 首页展示 -->
+        <ul class="fp-details" id="index-list">
+
+        </ul>
+        <script type="text/html" id="list-template">
+            <!-- 根据list来循环li -->
+            <!-- 这里的数据有多个，是个数组，所以要用each;若是个对象 就不用each -->
+            {{each list item}}
+            <li>
+                <a href="./html/info.html?id={{item.id}}" target="_black"><img src="{{item.image}}" alt=""></a>
+                <p>
+                    {{item.title}}
+                    <br>
+                    <span class="red">{{item.price}}</span>
+                </p>
+            </li>
+            {{/each}}
+        </script>
+    </div>
+    <!-- footer -->
+    <footer></footer>
+    <script src="libs/requirejs/require.min.js" data-main="./js/index"></script>
+</body>
+</html>
