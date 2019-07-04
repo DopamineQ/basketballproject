@@ -59,19 +59,19 @@
                 li{
                     height: 138px;
                     border-bottom: 1px solid #efefef;
-                    clear: both;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                     .check-box{
-                        display: block;
-                        float: left;
-                        width: 70px;
+                        
+                        width: 20px;
                         text-align: center;
-                        height: 63px;
-                        padding-top: 75px;
+                        height: 20px;
+                        margin-top: 55px;
                     }
                     .img-1{
                         display: block;
-                        float: left;
-                        width: 120px;
+                        
                         margin-right: 20px;
                         height: 120px;
                         margin-top: 5px;
@@ -83,7 +83,7 @@
                         }
                     }
                     .name{
-                        float: left;
+                        
                         font-size: 18px;
                         color: #333;
                         line-height: 25px;
@@ -97,7 +97,7 @@
                     }
                     .num{
                         width:105px;
-                        float: left;
+                        
                         height: 30px;
                         color: #999;
                         padding-top: 50px;
@@ -141,7 +141,7 @@
                         }
                     }
                     .price{
-                        float: left;
+                        
                         margin-left:20px; 
                         width: 180px;
                         text-align: center;
@@ -157,7 +157,7 @@
                         height: 35px;
                         margin-left: 20px;
                         padding-top: 50px;
-                        float: left;
+                        
                         .sc{
                             display: block;
                             width: 35px;
@@ -173,14 +173,28 @@
             .cart-operate{
                 margin-top: 30px;
                 height: 165px;
-                clear: both;
-                line-height: 75px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .all-check{
+                    height: 75px;
+                    .all-check-box{
+                        width: 20px;
+                        height: 20px;
+                        float: left;
+                    }
+                    span{
+                        float: right;
+                        font-size: 16px;
+                    }
+                }               
                 .jxm{
                     height: 75px;
                     float: left;
                     a{
                         padding: 0 10px;
                         color: #ff9000;
+                        font-size: 24px;
                     }
                 }
                 .total{
@@ -202,6 +216,7 @@
             .clear{
                 width: 938px;
                 height: 60px;
+                margin-top: 20px;
                 .settlement{
                     display: block;
                     width: 220px;

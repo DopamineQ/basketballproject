@@ -68,7 +68,8 @@
     }
     .shop-cart{
         display: block;
-        width: 90px;
+        position: relative;
+        width: 100px;
         height: 40px;
         float: right;
         text-align: center;
@@ -84,8 +85,16 @@
             background-position: -237px -5px;
         }
         .cart-num{
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background: palevioletred;
+            border: 1px solid #fff;
+            border-radius: 50%;
             font-size: 14px;
             float: right;
+            text-align: center;
+            color: #333;
         }
     }
 }

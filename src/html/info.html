@@ -105,10 +105,9 @@
                     </div>
                     <div class="model">
                         <b>型号 :</b>
-                        <span>{{detail.size}}</span>
-                        <span>{{detail.size}}</span>
-                        <span>{{detail.size}}</span>
-                        <span>{{detail.size}}</span>
+                        {{each detail.size list}}
+                        <span>{{list}}</span>
+                        {{/each}}
                     </div>
                     <div class="style">
                         <b>颜色 :</b>
@@ -126,11 +125,12 @@
                     </div>
                     <div class="shop-btn">
                         <a class="link1" id="edit" href="#" >立刻购买</a>
-                        <a class="link2" id="shopcart" href="#" >放入购物车</a>
+                        <a class="link2" id="shopcart" href="javascript:;" >放入购物车</a>
                     </div>
                     </script>
-                </div>
-                
+
+
+                </div> 
             </div>
         </div>
     <!-- footer -->
