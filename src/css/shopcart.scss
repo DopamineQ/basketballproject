@@ -67,7 +67,7 @@
                         width: 20px;
                         text-align: center;
                         height: 20px;
-                        margin-top: 55px;
+                        margin-top: 5px;
                     }
                     .img-1{
                         display: block;
@@ -156,7 +156,6 @@
                         width: 100px;
                         height: 35px;
                         margin-left: 20px;
-                        padding-top: 50px;
                         
                         .sc{
                             display: block;
@@ -191,6 +190,7 @@
                 .jxm{
                     height: 75px;
                     float: left;
+                    margin-left: 75px;
                     a{
                         padding: 0 10px;
                         color: #ff9000;
@@ -207,7 +207,7 @@
                         text-align: right;
                         line-height: 30px;
                     }
-                    .money{
+                    .totalPrice{
                         color: red;
                         font-size: 24px;
                     }

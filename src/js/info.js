@@ -123,7 +123,8 @@ require(['./config'], function () {
                             //把当前商品push进去就可以了
                             allCart.push({
                                 ..._this.detail,
-                                num:1
+                                num:1,
+                                check: true
                             })
                             // localStorage.setItem('cart', JSON.stringify(allCart))
                         }
@@ -132,10 +133,12 @@ require(['./config'], function () {
                     }else{
                         //购物车没有数据 为空
                         //把当前的数据构造出一个数组（length为1），存进去且默认要有一个num字段（一般为1或者页面上显示的数量）来记录数量
+                        //默认让商品在购物车页面处于选中状态
                         let arr = [
                             {
                                 ..._this.detail,
-                                num:1
+                                num:1,
+                                check: true
                             }
                         ]
                         //把这个数据转成json字符串然后存到localstorage

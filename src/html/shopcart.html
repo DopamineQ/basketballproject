@@ -29,8 +29,8 @@
                         <li class="f1" style="width:180px">价格</li>
                         <li class="f1" style="width:120px">操作</li>
                     </ul>
-                    <ul class="cart-list">
-                        <li>
+                    <ul class="cart-list" id="cart-box">
+                        <!-- <li>
                             <input type="checkbox" name="" id="" class="check-box">
                             <a href="" class="img-1">
                                 <img src="//img.t2cn.com/zbshop/product/QC0008_1.jpg">
@@ -52,31 +52,37 @@
                             <div class="del">
                                 <a class="sc" href="javascript:void(0)">删除</a>
                             </div>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="" id="" class="check-box">
-                                <a href="" class="img-1">
-                                    <img src="//img.t2cn.com/zbshop/product/QC0008_1.jpg">
-                                </a>
-                                <div class="name">
-                                    自由幻想-机械键盘
-                                    <p>规格:443mm*143mm 红轴  颜色:黑色</p>
-                                </div>
-                                <div class="num">
-                                    <a class=" count_minus" href="javascript:void(0)">-</a>
-                                    <p>
-                                        <input type="text" value="1" id="buyCount" class="shop_count" readonly="readonly">
-                                    </p>
-                                    <a class=" count_plus" href="javascript:void(0)">+</a>
-                                </div>
-                                <div class="price">
-                                    <span>469.0</span>
-                                </div>
-                                <div class="del">
-                                    <a class="sc" href="javascript:void(0)">删除</a>
-                                </div>
-                            </li>
+                        </li> -->
                     </ul>
+                    <script type="text/html" id="template-cart">
+                        {{each cart data}}
+                        <!-- 自定义属性data-id -->
+                        <li data-id="{{data.id}}">   
+                            <input type="checkbox"  class="check-box" {{data.check ? "checked" : ""}}>
+                            <a href="" class="img-1">
+                                <img src="{{data.images[0]}}">
+                            </a>
+                            <div class="name">
+                                {{data.title}}
+                                <p>规格:{{data.size}}  颜色:{{data.typea}}</p>
+                            </div>
+                            <div class="num">
+                                <a class=" count_minus" href="javascript:void(0)">-</a>
+                                <p>
+                                    <input type="text" value="{{data.num}}" id="buyCount" class="shop_count" readonly="readonly">
+                                </p>
+                                <a class=" count_plus" href="javascript:void(0)">+</a>
+                            </div>
+                            <div class="price">
+                                <span>{{(data.num*data.price).toFixed(2)}}</span>
+                            </div>
+                            <div class="del">
+                                <a class="sc" href="javascript:void(0)">删除</a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+
                     <ul class="cart-operate">
                         <li class="all-check">
                             <input type="checkbox" id="" class="all-check-box"><span>全选</span>
@@ -86,17 +92,17 @@
                             <p class="p1">全场满199包邮</p>
                             <p class="p2">原价：469.00元</p>
                             <p class="p3">优惠：0元</p>
-                            总计：<span class="money">469.0元</span>
+                            总计：<span class="totalPrice">469.0元</span>
                         </li>
                     </ul>
                     <div class="clear">
-                        <a href="" class="settlement">结算</a>
+                        <a href="" class="settlement">结算啦</a>
                     </div>
                 </div>
         </div>
     </div>
     <!-- footer -->
     <footer></footer>
-    <script src="../libs/requirejs/require.min.js" data-main="../js/shopcart.js"></script>
+    <script src="../libs/requirejs/require.min.js" data-main="/js/shopcart.js"></script>
 </body>
 </html>

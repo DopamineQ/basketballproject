@@ -1,20 +1,30 @@
-<script type="text/html" id="img-template"> 
-    <a href="" class="big-img">
-        <img src="{{detail.images[0]}}" data-zoom-image="{{detail.images[0]}}" class="zoom-img" alt=""> 
-    </a>
-    <div class="small-list">
-        <!-- <a href="" class="prev"></a> -->
-        <div class="img-list">
-            <ul>
-                {{each detail.images img}}
-                <li class="f2">
-                    <a href="" data-image="{{detail.images[0]}}" data-zoom-image="{{detail.images[0]}}">
-                        <img src="{{img}}">
-                    </a>
-                </li>
-                {{/each}}
-            </ul>
+<script type="text/html">
+    {{each cart data}}
+    <li>
+        <input type="checkbox" name="" id="" class="check-box" {{cart.check}}>
+        <a href="" class="img-1">
+            <img src="cart.images[0]">
+        </a>
+        <div class="name">
+            {{cart.title}}
+            <p>规格:{{cart.size}}  颜色:{{cart.type}}</p>
         </div>
-        <!-- <a href="" class="next"></a> -->
-    </div>
+        <div class="num">
+            <a class=" count_minus" href="javascript:void(0)">-</a>
+            <p>
+                <input type="text" value="1" id="buyCount" class="shop_count" readonly="readonly">
+            </p>
+            <a class=" count_plus" href="javascript:void(0)">+</a>
+        </div>
+        <div class="price">
+            <span>{{cart.price}}</span>
+        </div>
+        <div class="del">
+            <a class="sc" href="javascript:void(0)">删除</a>
+        </div>
+    </li>
+    {{/each}}
+
+
+
 </script>
