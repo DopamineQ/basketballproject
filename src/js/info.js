@@ -113,7 +113,7 @@ require(['./config'], function () {
                             // });
                             allCart = allCart.map(shop => {
                                 if(shop.id === _this.detail.id) shop.num++
-                                //map这个方法每次循环都要有一个返回值，这些返回值会构成一个新的数组，就是map的结果
+                                //map这个方法每次循环都要有一个返回值，这些返回值会构成一个新的数组，就是整个map的结果
                                 return shop
                             })
                             //修改完成之后重新存一次，把之前的覆盖掉

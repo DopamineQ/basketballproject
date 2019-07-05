@@ -1,5 +1,10 @@
 require(['./config'], function () {
-    require(['header', 'footer','aside'], function () {
+    require(['template', 'header', 'footer','aside'], function (template) {
+        class Cart{
+            constructor () {
 
+            }
+        }
+        new Cart()
     })
 })
