@@ -41,14 +41,16 @@
     min-width: 1240px;
     // background: greenyellow;
     margin: 0 auto;
-    .carousel{
+    .swiper-container{
         width: 100%;
-        height: auto;
-        min-height: 300px;
-        margin: 0 auto;
-        background: blue;
-        position:relative;
+        height: 300px;
+        // margin: 0 auto;
+        // background: blue;
+        // position:relative;
         margin-top: 58px;
+        img{
+            height: 300px;
+        }
     }
     .fp-details{
         width: 100%;

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>街头篮球周边商城</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
 </head>
 <body>
     <!-- aside -->
@@ -25,7 +27,22 @@
     <!-- content -->
     <div class="content-wrap">
         <!-- 轮播图 -->
-        <div class="carousel"></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="http://img.t2cn.com/zbshop/product/index_img/index_zb4.jpg"></div>
+                <div class="swiper-slide"><img src="http://img.t2cn.com/zbshop/product/index_img/index_zb1.jpg"></div>
+                <div class="swiper-slide"><img src="http://img.t2cn.com/zbshop/product/index_img/index_zb3.jpg"></div>
+                <div class="swiper-slide"><img src="http://img.t2cn.com/zbshop/product/index_img/index_zb2.jpg"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+        </div>
+
         <!-- 首页展示 -->
         <ul class="fp-details" id="index-list">
 
@@ -48,5 +65,40 @@
     <!-- footer -->
     <footer></footer>
     <script src="libs/requirejs/require.min.js" data-main="./js/index"></script>
+    
+    <!-- 初始化swiper -->
+    <script>        
+        var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'horizontal', // 垂直切换选项
+          loop: true, // 循环模式选项
+          speed:800,
+        //   grabCursor:true,
+          
+          
+          // 如果需要分页器
+          pagination: {
+            el: '.swiper-pagination',
+            clickable:true,
+            type:'bullets'
+          },
+          
+          // 如果需要前进后退按钮
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          // 如果需要滚动条
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+
+          autoplay: {
+           delay: 2000,//时间 毫秒
+           disableOnInteraction: false,//用户操作之后是否停止自动轮播默认true 
+       },
+          autoplayDisableOnInteraction : false,  
+        })        
+        </script>
 </body>
 </html>
