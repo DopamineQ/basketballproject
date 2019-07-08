@@ -172,6 +172,7 @@
             .cart-operate{
                 margin-top: 30px;
                 height: 165px;
+                position: relative;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -191,6 +192,9 @@
                     height: 75px;
                     float: left;
                     margin-left: 75px;
+                    position: absolute;
+                    left: 35%;
+                    top: 55%;
                     a{
                         padding: 0 10px;
                         color: #ff9000;
@@ -206,6 +210,10 @@
                         font-size: 14px;
                         text-align: right;
                         line-height: 30px;
+                        .yuanjia{
+                            color: gold;
+                            font-size: 18px;
+                        }
                     }
                     .totalPrice{
                         color: red;
@@ -216,7 +224,7 @@
             .clear{
                 width: 938px;
                 height: 60px;
-                margin-top: 20px;
+                margin-top: 25px;
                 .settlement{
                     display: block;
                     width: 220px;

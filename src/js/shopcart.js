@@ -4,11 +4,15 @@ require(['./config'], function () {
             constructor () {
                 this.container = $('#cart-box')
                 this.totalPrice = $('.totalPrice')
+                this.yuanjia = $('.yuanjia')
                 this.allCheck = $('.all-check-box')
                 this.init()
                 this.calcMoney()
                 this.checkChange()
                 this.allCheckChange()
+                this.plusBtn()
+                this.minusBtn()
+                this.delete()
             }
 
             init () {
@@ -42,7 +46,8 @@ require(['./config'], function () {
                     return money
                 }, 0)
                 //显示在总计里
-                this.totalPrice.html(this.money)
+                this.totalPrice.html(this.money.toFixed(2))
+                this.yuanjia.html(this.money.toFixed(2))
             }
 
             checkChange () {
@@ -92,12 +97,62 @@ require(['./config'], function () {
 
             //给加减绑事件 事件委托 点了按钮后 1.找父级的tr 找id 将num++或者-- 先改数据
             plusBtn () {
-                
+                let _this = this
+                this.container.on('click', '.count_plus', function () {
+                    const id = $(this).parents('li').attr('data-id')
+                    // //console.log(id)
+                    _this.cart = _this.cart.map( (shop) => {
+                        if(shop.id === id) {
+                           shop.num++
+                        }
+                        return shop
+                    })
+                    //console.log(_this.cart)
+                    localStorage.setItem('cart', JSON.stringify(_this.cart))
+                    _this.init()
+                    header.calcTotalNum()
+                    _this.calcMoney ()
+
+                })
             }
 
+            minusBtn () {
+                let _this = this 
+                this.container.on('click', '.count_minus', function () {
+                    const id = $(this).parents('li').attr('data-id')
+                    _this.cart = _this.cart.map( (shop) => {
+                        if(shop.id === id){
+                            shop.num--
+                            if(shop.num === 0) shop.num = 1
+                        }
+                        return shop
+                    })
+                    localStorage.setItem('cart', JSON.stringify(_this.cart))
+                    _this.init()
+                    header.calcTotalNum()
+                    _this.calcMoney ()
+                })
 
+            }
 
             //删除 也是先找id 然后将从数据删了 然后再将dom移除 
+            delete () {
+                let _this = this
+                this.container.on('click', '.sc', function () {
+                    const id = $(this).parents('li').attr('data-id')
+                    _this.cart = _this.cart.filter( (shop) => {
+                        if(shop.id === id) {
+
+                        }else{
+                            return shop
+                        }
+                    })
+                    localStorage.setItem('cart', JSON.stringify(_this.cart))
+                    _this.init()
+                    header.calcTotalNum()
+                    _this.calcMoney ()
+                })
+            }
             //做完加减删除要调用一下header.calcTotalNum()
         }
         new Cart()
