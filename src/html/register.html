@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
+    <aside></aside>
     <div class="register-wrap">
         <div class="logo"></div>
         <div class="content">
@@ -15,11 +16,11 @@
             <ul class="register-content">
                 <li>
                     <span class="register-text">通行证</span>
-                    <input type="text" class="register-input">
+                    <input type="text" class="register-input" id="user-name" placeholder="请输入用户名">
                 </li>
                 <li>
                     <span class="register-text">密码</span>
-                    <input type="text" class="register-input">
+                    <input type="text" class="register-input" id="user-pwd" placeholder="请输入密码">
                 </li>
             </ul>
             <input type="button" value="注册" id="register-btn">
@@ -43,5 +44,6 @@
             </div> 
         </div>
     </div>
+    <script src="../libs/requirejs/require.min.js" data-main="/js/register.js"></script>
 </body>
 </html>

@@ -15,19 +15,20 @@
             <ul class="login-content">
                 <li>
                     <span class="login-text">通行证</span>
-                    <input type="text" class="login-input">
+                    <input type="text" class="login-input" id="user-name">
                 </li>
                 <li>
                     <span class="login-text">密码</span>
-                    <input type="text" class="login-input">
+                    <input type="text" class="login-input" id="user-pwd">
                 </li>
             </ul>
-            <input type="button" value="登录" id="login-btn">
+            <button type="button" id="login-btn">登录</button>
             <div class="link">
-                <a href="">注册</a>
+                <a href="/html/register.html">注册</a>
                 <a href="https://passport.t2cn.com/login/recoverBySecurity.jsp">忘记密码？</a>
             </div>
         </div>
+        <!-- footer -->
         <div class="bottom-wrap">
             <div class="bottom">
                 <a href="//www.t2cn.com/" target="_blank" class="logo-bottom">天游软件有限公司</a>
@@ -47,5 +48,6 @@
             </div> 
         </div>
     </div>
+    <script src="/libs/requirejs/require.min.js" data-main="/js/login.js"></script>
 </body>
 </html>

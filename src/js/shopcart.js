@@ -136,6 +136,7 @@ require(['./config'], function () {
             }
 
             //删除 也是先找id 然后将从数据删了 然后再将dom移除 
+            //做完加减删除要调用一下header.calcTotalNum()
             delete () {
                 let _this = this
                 this.container.on('click', '.sc', function () {
@@ -153,7 +154,7 @@ require(['./config'], function () {
                     _this.calcMoney ()
                 })
             }
-            //做完加减删除要调用一下header.calcTotalNum()
+            
         }
         new Cart()
     })
