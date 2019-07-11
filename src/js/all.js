@@ -14,6 +14,7 @@ require(['./config'], function () {
                 this.getData().then( (list) => {
                     //参数两层传递 首先then里面接受了resolve传递过来的list数据，紧接着继续传递给renderList
                     this.renderList(list)
+                    this.sortPrice(list)
                 })
             }
             // init () {
@@ -44,6 +45,22 @@ require(['./config'], function () {
                 //第二个list是value 指的是传递过来的从接口获取的值 
                 let str = template('list-template', { list })
                 this.container.html(str)
+            }
+
+            sortPrice(list) {
+                let _this = this
+                $('.sort-price').click(function () {
+                    let listPrice = list.sort((a,b) => {
+                        if(a.price > b.price){
+                            return 1
+                        }
+                        if(a.price < b.price){
+                            return -1
+                        }
+                        return 0
+                    })
+                    _this.renderList (listPrice)
+                })
             }
 
             

@@ -9,7 +9,8 @@ require.config({
         url:'js/module/url',
         zoom:'libs/jquery-plugins/jquery.elevateZoom-3.0.8.min',
         fly:'libs/jquery-plugins/jquery.fly',
-        cookie:'libs/jquery-plugins/jquery.cookie'
+        cookie:'libs/jquery-plugins/jquery.cookie',
+        pagination:'libs/jqueryPagination/jquery.pagination.min'
     },
     //垫片
     //一些不满足AMD规范但是又依赖别的模块
@@ -21,7 +22,12 @@ require.config({
         fly: {
             deps: ['jquery']
         },
+
         cookie: {
+            deps: ['jquery']
+        },
+        
+        pagination: {
             deps: ['jquery']
         }
     }
