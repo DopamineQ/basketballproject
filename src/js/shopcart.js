@@ -19,11 +19,12 @@ require(['./config'], function () {
                 //取数据，渲染模板，显示在页面上
                 this.cart = JSON.parse(localStorage.getItem('cart'))
                 //判断是否为空？如果为空就不渲染模板 而是给用户显示为空的界面
-                if(this.cart) {
-                    let str = template('template-cart', {cart: this.cart})
-                    this.container.html(str)
-                }else{
+                console.log(this.cart)
+                if(this.cart === null || this.cart.length === 0 ) {
                     this.container.html("<a href='/' style='display:block; color:green; font-size:25px; text-align:center'>快去买东西吧！</a>")
+                }else{
+                    let str = template('template-cart', {cart: this.cart})
+                    this.container.html(str) 
                 }
 
                 //一上来的时候默认就要判断是否全选
@@ -140,18 +141,20 @@ require(['./config'], function () {
             delete () {
                 let _this = this
                 this.container.on('click', '.sc', function () {
-                    const id = $(this).parents('li').attr('data-id')
-                    _this.cart = _this.cart.filter( (shop) => {
-                        if(shop.id === id) {
-
-                        }else{
-                            return shop
-                        }
-                    })
-                    localStorage.setItem('cart', JSON.stringify(_this.cart))
-                    _this.init()
-                    header.calcTotalNum()
-                    _this.calcMoney ()
+                    if(confirm('兄弟 确定要删吗')){
+                        const id = $(this).parents('li').attr('data-id')
+                        _this.cart = _this.cart.filter( (shop) => {
+                            if(shop.id === id) {
+    
+                            }else{
+                                return shop
+                            }
+                        })
+                        localStorage.setItem('cart', JSON.stringify(_this.cart))
+                        _this.init()
+                        header.calcTotalNum()
+                        _this.calcMoney ()
+                    }
                 })
             }
             

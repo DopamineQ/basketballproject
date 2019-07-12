@@ -46,13 +46,14 @@
     text-align: center;
     color: black;
     border: 2px solid palevioletred;
+    border-radius: 20px;
 }
 .header-wrap .head .search-value {
     position: absolute;
     width: 200px;
     font-size: 12px;
     z-index: 999;
-    background: white;
+    background:green;
     left: 380px;
     top: 65px;
     box-shadow: 0 0 13px rgba(0, 0, 0, .1);
@@ -60,7 +61,7 @@
     li {
         cursor: pointer;
         &:hover {
-            background: #684b34;
+            background: #683434;
             color: white;
         }
     }
