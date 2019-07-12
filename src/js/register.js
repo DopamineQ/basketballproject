@@ -17,8 +17,14 @@ require(['./config'], function () {
                     let name = _this.name.val()
                     let pwd = _this.pwd.val()
                     let info = localStorage.getItem('register')
-                    if(info){
-                        
+
+                    if(_this.name.val() == ""){
+                        alert('用户名不能空啊')
+                        return false
+                    }else if(_this.pwd.val() == ""){
+                        alert('密码不能为空啊')
+                        return false
+                    }else if(info){                      
                         info = JSON.parse(info)
                         // console.log(info)
                         let arr2 = info.some( (item) => {

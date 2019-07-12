@@ -1,4 +1,4 @@
-define(['jquery','cookie'], function(cookie) {
+define(['template', 'jquery','cookie'], function(template) {
     class Header {
         constructor () {
             this.container = $('header')
@@ -9,6 +9,8 @@ define(['jquery','cookie'], function(cookie) {
                 this.calcTotalNum()
                 this.logined () 
                 this.cancel()
+                this.searchInput()
+
             })
         }
         init() {
@@ -69,6 +71,19 @@ define(['jquery','cookie'], function(cookie) {
                 window.location.reload()
             })
             this.logined()
+        }
+        //头部搜索框 请求百度开放接口
+        searchInput () {
+            $('.search').on('keyup', function () {
+                let inputValue = $(this).val()
+                $.getJSON(`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${inputValue}&cb=?`,resp =>{
+                    let str = template('templateSearch',{list: resp.s})
+                    $('.search-value').html(str)
+                    $('.search-value').show()
+                })
+
+            })
+
         }
 
     } 

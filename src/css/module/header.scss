@@ -34,6 +34,38 @@
     width: 160px;
     height: 92px;
 }
+.header-wrap .head .search{
+    width: 250px;
+    height: 25px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 60px;
+    background: url(../../images/search.png) no-repeat;
+    background-position: -380px -38px;
+    outline: none;
+    text-align: center;
+    color: black;
+    border: 2px solid palevioletred;
+}
+.header-wrap .head .search-value {
+    position: absolute;
+    width: 200px;
+    font-size: 12px;
+    z-index: 999;
+    background: white;
+    left: 380px;
+    top: 65px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, .1);
+    display: none;
+    li {
+        cursor: pointer;
+        &:hover {
+            background: #684b34;
+            color: white;
+        }
+    }
+}
+
 .header-wrap .head .nav{
     width: 650px;
     height: 40px;
